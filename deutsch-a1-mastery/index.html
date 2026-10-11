@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="Interactive German A1 grammar and vocabulary revision lab with lessons, practice quizzes, flashcards and a mock exam." />
+  <title>Deutsch A1 Mastery — Grammar & Vocabulary Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dark">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark"><span>D</span><i>✦</i></div>
+        <div><div class="brand-name">Deutsch <b>A1</b></div><div class="brand-sub">MASTERY LAB</div></div>
+      </div>
+      <div class="sidebar-label">LEARN</div>
+      <nav class="nav-group" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span><span>Dashboard</span></button>
+        <button class="nav-item" data-page="lessons"><span class="nav-icon">▤</span><span>Grammar lessons</span><span class="nav-count" id="nav-lesson-count">12</span></button>
+        <button class="nav-item" data-page="vocabulary"><span class="nav-icon">Aa</span><span>Vocabulary lab</span><span class="nav-count">295</span></button>
+        <button class="nav-item" data-page="transform"><span class="nav-icon">⇄</span><span>Sentence lab</span></button>
+        <button class="nav-item" data-page="practice"><span class="nav-icon">◉</span><span>Practice centre</span></button>
+      </nav>
+      <div class="sidebar-label">REVISE</div>
+      <nav class="nav-group" aria-label="Revision navigation">
+        <button class="nav-item" data-page="flashcards"><span class="nav-icon">▣</span><span>Flashcards</span></button>
+        <button class="nav-item" data-page="quick"><span class="nav-icon">☷</span><span>Quick revision</span></button>
+        <button class="nav-item" data-page="mistakes"><span class="nav-icon">↺</span><span>Mistake notebook</span><span class="nav-count" id="nav-mistakes">0</span></button>
+        <button class="nav-item" data-page="mock"><span class="nav-icon">◷</span><span>Mock examination</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-streak"><div class="streak-icon">✦</div><div><strong id="sidebar-streak-count">0 day streak</strong><small>Consistency beats cramming.</small></div></div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark theme"><span id="theme-icon">☼</span><span id="theme-label">Switch to light mode</span><span class="toggle-track"><i></i></span></button>
+        <div class="sidebar-foot">Learn. Practise. Transform.</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="crumbs"><span>Deutsch A1 Mastery</span><b>/</b><strong id="page-crumb">Dashboard</strong></div>
+        <div class="topbar-actions">
+          <label class="global-search"><span>⌕</span><input id="global-search" type="search" placeholder="Search grammar or vocabulary…" aria-label="Search grammar or vocabulary" /><kbd>↵</kbd></label>
+          <button class="icon-btn" id="top-theme-toggle" aria-label="Toggle theme">◐</button>
+          <div class="avatar" title="Your learning space">SK</div>
+        </div>
+      </header>
+      <section id="app-content" class="content-area" aria-live="polite">
+        <div class="loading-state"><div class="loading-logo">D</div><p>Preparing your learning lab…</p></div>
+      </section>
+      <footer class="site-footer"><div class="footer-line"></div><div class="footer-copy"><strong>MADE BY SHIVAM KUMAR AGGARWAL 👍🏻</strong><span>Built for learners. Designed for mastery.</span></div><div class="footer-tag">GERMAN A1 <b>•</b> LEARN WITH PURPOSE</div></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="vocabulary.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
